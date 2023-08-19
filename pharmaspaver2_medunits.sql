@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: pharmaspaver2
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.4.27-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `medunits`
+--
+
+DROP TABLE IF EXISTS `medunits`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `medunits` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `medUnitsName` varchar(200) NOT NULL COMMENT '-Tên duy nhất trong bảng',
+  `userCreatorsId` bigint(20) NOT NULL,
+  `dateCreated` datetime DEFAULT current_timestamp(),
+  `dateUpdated` datetime DEFAULT current_timestamp(),
+  `status` int(11) DEFAULT 1 COMMENT '1: enabled 0: disabled -1: draf; -2: chờ duyệt',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='Gợi ý đơn vị cho thuốc';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `medunits`
+--
+
+LOCK TABLES `medunits` WRITE;
+/*!40000 ALTER TABLE `medunits` DISABLE KEYS */;
+INSERT INTO `medunits` VALUES (62,'Hộp',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(63,'Lọ',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(64,'Ống',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(65,'Viên',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(66,'Miếng',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(67,'Tuýp',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(68,'Gói',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(69,'Bình',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(70,'Chai',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(71,'Kit',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(72,'Bánh',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(73,'Bộ',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(74,'Vỉ',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(75,'Liều',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(76,'Túi',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(77,'Can',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(78,'Lượt',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(79,'Que',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(80,'Xy',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(81,'Cái',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(82,'Vòng',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(83,'Thùng',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(84,'Nang',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(85,'Thanh cấy',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(86,'Cặp',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(87,'Hũ',1,'2022-09-28 02:44:08','2022-09-28 02:44:08',1),(88,'Vỉ 6 viên ',1,'2022-09-28 06:45:24','2022-09-28 06:45:24',1),(89,'Vỉ 12 viên',1,'2022-09-28 06:45:24','2022-09-28 06:45:24',1);
+/*!40000 ALTER TABLE `medunits` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-08-19 16:16:37

@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: pharmaspaver2
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.4.27-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `medproducers`
+--
+
+DROP TABLE IF EXISTS `medproducers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `medproducers` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `medProducersName` varchar(200) NOT NULL,
+  `userCreatorsId` bigint(20) NOT NULL,
+  `dateCreated` datetime DEFAULT current_timestamp(),
+  `dateUpdated` datetime DEFAULT NULL,
+  `status` int(11) DEFAULT 1 COMMENT '1: enabled 0: disabled -1: draf; -2: chờ duyệt',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='nhà sản xuất thuốc';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `medproducers`
+--
+
+LOCK TABLES `medproducers` WRITE;
+/*!40000 ALTER TABLE `medproducers` DISABLE KEYS */;
+INSERT INTO `medproducers` VALUES (1,'ABU',591,'2022-11-11 23:43:36','2022-11-12 10:37:47',-1),(2,'ABU & ADI',591,'2022-11-12 10:46:44','2022-11-12 10:46:44',1),(3,'Dạ Hương',591,'2022-11-12 11:09:34','2022-11-12 11:09:34',1),(4,'Thái Dương',591,'2022-11-12 11:14:09','2022-11-12 11:14:09',1),(5,'HCM',591,'2022-11-12 11:34:15','2022-11-12 11:34:15',1),(6,'Hải Phòng',591,'2022-11-12 11:37:25','2022-11-12 11:37:25',1),(7,'Traphaco',591,'2022-11-12 11:42:46','2022-11-12 11:42:46',1),(8,'Ngọc Châu',591,'2022-11-12 11:44:24','2022-11-12 11:44:24',1),(9,'Hậu Giang',591,'2022-11-12 11:46:34','2022-11-12 11:46:34',1),(10,'Ấn',591,'2022-11-12 11:56:42','2022-11-12 11:56:42',1),(11,'VN',591,'2022-11-12 11:59:49','2022-11-12 11:59:49',1),(12,'Cửu Long',591,'2022-11-12 13:06:32','2022-11-12 13:06:32',1),(13,'US pharma',591,'2022-11-12 13:30:49','2022-11-12 13:30:49',1),(14,'Hàng Ngoại',591,'2022-11-12 14:42:30','2022-11-12 14:42:30',1),(15,'Nam Dược',591,'2022-11-12 17:01:30','2022-11-12 17:01:30',1),(16,'TW3',591,'2022-11-12 17:03:10','2022-11-12 17:03:10',1),(17,'Hoa Linh',591,'2022-11-12 17:04:56','2022-11-12 17:04:56',1),(18,'Phúc Vinh',591,'2022-11-12 17:17:54','2022-11-12 17:17:54',1),(19,'Thanh Hóa',591,'2022-11-12 17:24:06','2022-11-12 17:24:06',1),(20,'Tân Á',591,'2022-11-12 17:48:54','2022-11-12 17:48:54',1),(21,'Tanaphar',591,'2022-11-12 17:49:22','2022-11-12 17:49:22',1),(22,'Bibica',591,'2022-11-12 17:53:19','2022-11-12 17:53:19',1),(23,'Dược Lâm Đồng',591,'2022-11-13 11:26:30','2022-11-13 11:26:30',1),(24,'Dược Hà Thành',591,'2022-11-13 11:34:22','2022-11-13 11:34:22',1),(25,'Dược Đại Uy',591,'2022-11-13 11:40:55','2022-11-13 11:40:55',1),(26,'MERAP',591,'2022-11-13 11:56:39','2022-11-13 11:56:39',1);
+/*!40000 ALTER TABLE `medproducers` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-08-19 16:16:36

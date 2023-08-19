@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: chuyendoiso
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.4.27-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `contentsviews`
+--
+
+DROP TABLE IF EXISTS `contentsviews`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `contentsviews` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `views` int(11) DEFAULT 0 COMMENT 'số lượt truy cập trong ngày',
+  `contentsId` bigint(20) NOT NULL,
+  `statisticalDay` date DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `statisticalDay` (`statisticalDay`),
+  KEY `contentsId` (`contentsId`)
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='thống kê view content';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contentsviews`
+--
+
+LOCK TABLES `contentsviews` WRITE;
+/*!40000 ALTER TABLE `contentsviews` DISABLE KEYS */;
+INSERT INTO `contentsviews` VALUES (1,1,1,'2022-12-19'),(2,1,2,'2022-12-19'),(3,1,1,'2022-12-20'),(4,1,2,'2022-12-20'),(5,1,3,'2022-12-20'),(6,1,4,'2022-12-20'),(7,7,4,'2022-12-21'),(8,1,5,'2022-12-21'),(9,2,3,'2022-12-21'),(10,2,8,'2022-12-21'),(11,4,9,'2022-12-21'),(12,21,7,'2022-12-21'),(13,5,10,'2022-12-21'),(14,2,6,'2022-12-21'),(15,2,2,'2022-12-21'),(16,2,8,'2022-12-22'),(17,2,2,'2022-12-22'),(18,1,5,'2022-12-22'),(19,1,4,'2022-12-22'),(20,19,10,'2022-12-22'),(21,2,9,'2022-12-22'),(22,1,7,'2022-12-22'),(23,1,1,'2022-12-22'),(24,13,10,'2022-12-23'),(25,1,6,'2022-12-23'),(26,1,26,'2022-12-23'),(27,5,27,'2022-12-23'),(28,11,7,'2022-12-23'),(29,10,23,'2022-12-23'),(30,1,3,'2022-12-23'),(31,2,22,'2022-12-23'),(32,26,14,'2022-12-23'),(33,2,9,'2022-12-23'),(34,10,10,'2022-12-26'),(35,9,14,'2022-12-26'),(36,7,14,'2022-12-27'),(37,1,14,'2022-12-28'),(38,2,10,'2022-12-30'),(39,1,14,'2023-01-01'),(40,1,15,'2023-01-01'),(41,1,14,'2023-01-03'),(42,4,13,'2023-01-05'),(43,2,23,'2023-01-05'),(44,1,11,'2023-01-05'),(45,2,12,'2023-01-05'),(46,2,10,'2023-01-09'),(47,3,14,'2023-01-09'),(48,2,23,'2023-01-09'),(49,1,27,'2023-01-09'),(50,1,14,'2023-01-10'),(51,2,24,'2023-01-10'),(52,1,27,'2023-01-10'),(53,4,10,'2023-01-10'),(54,1,9,'2023-01-10'),(55,1,7,'2023-01-10'),(56,7,10,'2023-01-11'),(57,4,7,'2023-01-11'),(58,2,14,'2023-01-11'),(59,1,19,'2023-01-11'),(60,1,9,'2023-01-11'),(61,5,1,'2023-01-11'),(62,1,22,'2023-01-11'),(63,1,14,'2023-01-13'),(64,3,14,'2023-01-16'),(65,3,10,'2023-01-16'),(66,1,13,'2023-01-16'),(67,1,27,'2023-01-16'),(68,2,10,'2023-01-17'),(69,1,23,'2023-01-17');
+/*!40000 ALTER TABLE `contentsviews` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-08-19 16:18:51
